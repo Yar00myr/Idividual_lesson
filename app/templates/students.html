@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block info %}
+    <ol>
+        {% for student in students_mark_ %}
+        <li>{{ student.name }} {{student.surname}}: {{student.mark}} /100 </li>
+        {% endfor %}
+
+    </ol>
+    
+    
+{% endblock %}
