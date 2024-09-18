@@ -1,0 +1,22 @@
+*{
+    color: chartreuse;
+}
+
+ol {
+    counter-reset: item;
+    padding-left: 20px;
+    /* Adjust the indentation as needed */
+}
+
+li {
+    list-style-type: decimal;
+    /* Use decimal numbering (1, 2, 3, ...) */
+    counter-increment: item;
+    margin-bottom: 10px;
+    /* Adjust the spacing between items */
+}
+
+li::marker {
+    content: counter(item) ". ";
+    margin-right: 5px;
+}
