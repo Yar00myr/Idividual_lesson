@@ -1,0 +1,12 @@
+<nav>
+    <ul>
+        {% for k, v in site_map|site_map_sort %}
+            {% if request.endpoint != v %}
+                <li><a href="{{k}}"> {{v}}</a> </li> 
+            {% else %}
+                
+            {% endif %}
+        {% endfor %}
+
+    </ul>
+</nav>

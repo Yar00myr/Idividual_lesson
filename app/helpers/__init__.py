@@ -1,1 +1,2 @@
-from .data import students_data
+from .data import (students_data,
+                   site_map,)

@@ -1,0 +1,18 @@
+{% macro set_background() %}
+{% set current_time = ""|current_hour  %}
+    
+    {% if 5 <= current_time < 18 %}
+        {% set filename = "light_white_bg.jpg" %}
+    {% else %}
+        {% set filename = "dark_bg.jpg" %}
+    {% endif %}
+    
+<style>
+
+    body {
+        background-image: url("{{ url_for('static', filename='img/'+filename) }}");
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+{% endmacro %}
